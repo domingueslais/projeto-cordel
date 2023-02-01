@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'cordelina';
+    src: url('fontes/cordelina.otf') format('opentype');
+}
+@font-face {
+    font-family: 'texto';
+    src: url('fontes/KGPrimaryItalics.ttf') format('truetype');
+}
+* {
+    padding: 0px;
+    margin: 0px;
+}
+:root {
+    --fonte-padrao: verdana, helvetica, arial, sans-serif;
+    --fonte-titulo: 'cordelina', sans-serif;
+    --fonte-texto: 'texto', comic, serif;
+}
+html, body {
+    min-height: 100vh;
+    background-color: white;    
+    font-family: var(--fonte-padrao);
+    color:black;
+}
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+h1 {
+    font-family: var(--fonte-titulo); 
+    font-variant: small-caps;
+    font-size: 10vw;
+    padding-top: 50px;
+}
+header>p {
+    padding-bottom: 50px;
+}
+header a, footer a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+section {
+    font-family: var(--fonte-texto);
+    font-size: 4vw;
+    color: black;
+    line-height: 1.5em;
+    padding: 10vh 0px 10vh 30px;
+}
+section.imagem {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+section.imagem>p { 
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+}
+section#fundo1 {
+    background-image: url('imagens/background001.jpg');
+}
+section#fundo2 {
+    background-image: url('imagens/background002.jpg');
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
